@@ -54,3 +54,30 @@ var drawHorizontalLineAnim = function() {
   render();
 };
 drawHorizontalLineAnim();
+var drawVerticalLineAnim = function() {
+  var beginPos = 0,
+      movePos  = beginPos,
+      addVal   = 10,
+      endPos   = csHeight - 10,
+      isAnim   = function() {
+        return (movePos < endPos);
+      };
+
+  var render = function() {
+    ctx.beginPath();
+    ctx.moveTo(center.x, beginPos);
+    ctx.lineTo(center.x, movePos);
+    ctx.closePath();
+    ctx.stroke();
+
+    // 描画を繰り返す条件
+    if (isAnim() === true) {
+      movePos += addVal;
+      // ↑のaddで終了点を超えることがあるため上限を決める
+      movePos = (isAnim() === false) ? endPos : movePos;
+      requestAnimationFrame(render)
+    }
+  };
+  render();
+};
+drawVerticalLineAnim();
