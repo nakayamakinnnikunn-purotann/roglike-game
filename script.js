@@ -15,9 +15,9 @@
 
         // 縦に5本の線を描画
         function drawLines() {
-            var lineWidth = canvas.width / 5;
+            var lineWidth = canvas.width / 8;
 
-            for (var i = 1; i < 5; i++) {
+            for (var i = 1; i < 8; i++) {
                 var x = lineWidth * i;
                 context.beginPath();
                 context.moveTo(x, 0);
