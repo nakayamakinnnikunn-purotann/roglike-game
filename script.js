@@ -21,8 +21,8 @@
                 var x = lineWidth * i;
                 context.beginPath();
                 context.moveTo(x, 0);
-                context.lineTo(x, canvas.height);
-                context.stroke(#ffffff);
+                context.lineTo(x, canvas.height color: #ffffff,);
+                context.stroke();
 
             }
         }
