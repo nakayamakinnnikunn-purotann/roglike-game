@@ -24,7 +24,7 @@
 
                 context.lineTo(x, canvas.height);
                 context.stroke();
-                            context001.strokeStyle = '#ffffff';
+
             }
         }
 
