@@ -1,7 +1,7 @@
   // Canvas要素を取得
         var canvas = document.getElementById("myCanvas");
         var context = canvas.getContext("2d");
-ctx.strokeStyle = 'red';
+
         // キャンバスのサイズをウィンドウサイズに合わせる
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
@@ -21,9 +21,8 @@ ctx.strokeStyle = 'red';
                 var x = lineWidth * i;
                 context.beginPath();
                 context.moveTo(x, 0);
-
                 context.lineTo(x, canvas.height);
-                context.stroke();
+                context.stroke(#ffffff);
 
             }
         }
